@@ -1,0 +1,12 @@
+        }) else {
+            newCollage.dependencies.append(.init(pointIDs: ids))
+            return newCollage
+        }
+        
+        newCollage.dependencies[index] = .init(pointIDs: ids)
+        
+        return newCollage
+    }
+    
+    private func disconnectControlPoints(_ ids: Set<String>,
+                                         in collage: Collage) -> Collage {
